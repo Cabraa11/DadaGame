@@ -139,15 +139,19 @@ body {
   left: -60px;
   transform: rotate(-90deg);
 }
+
 .btn--roll {
   top: 33rem;
   left: 300px;
   transform: rotate(90deg);
+  width: 190px;
 }
+
 .btn--hold {
-  top: 52.1rem;
+  top: 55.3rem;
   left: 300px;
   transform: rotate(90deg);
+  width: 190px;
 }
 
 .btn:active {
