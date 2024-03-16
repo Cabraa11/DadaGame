@@ -28,6 +28,9 @@ const start = function () {
   player2Sec.classList.remove('player--active');
   player1Sec.classList.remove('player--winner');
   player2Sec.classList.remove('player--winner');
+  btnNew.style.top = '44.5rem';
+  btnNew.style.left = '-60px';
+  btnNew.style.transform = 'rotate(-90deg)';
 };
 start();
 // Function Switch player
@@ -46,7 +49,11 @@ btnRoll.addEventListener('click', function () {
     // Assign the randomDice to the images
     imgDice.classList.remove('hidden');
     imgDice.src = `dice-${randomDice}.png`;
+    btnRoll.style.top = '33rem';
+    btnRoll.style.left = '300px';
+    btnRoll.style.transform = 'rotate(90deg)';
     // Is the randomDice = 1? No: Add dice roll to current score. Yes: Switch Player
+
     if (randomDice !== 1) {
       document.querySelector(`#current--${activePlayer}`).textContent =
         currentScore += randomDice;
@@ -64,7 +71,9 @@ btnHold.addEventListener('click', function () {
     scores[activePlayer] += currentScore;
     document.querySelector(`#score--${activePlayer}`).textContent =
       scores[activePlayer];
-
+    btnHold.style.top = '55.3rem';
+    btnHold.style.left = '300px';
+    btnHold.style.transform = 'rotate(90deg)';
     // If score >= 100, player win
     if (scores[activePlayer] >= 100) {
       // Finish game
